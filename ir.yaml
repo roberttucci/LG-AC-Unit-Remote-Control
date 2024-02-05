@@ -10,14 +10,14 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "lhXgwnyYrEhWucbALFt2Gj16hR6tQVARZXinpHCw6WQ="
+    key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 ota:
-  password: "3b5494a2a8f9b17f94d5cc9e4142e466"
+  password: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 wifi:
   manual_ip:
-    static_ip: 172.16.1.199
+    static_ip: 172.16.x.xxx
     gateway: 172.16.1.1
     subnet: 255.255.255.0  
   ssid: !secret wifi_ssid
@@ -26,7 +26,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Nodemcu-Ac Fallback Hotspot"
-    password: "DrBAcKshjDMn"
+    password: "xxxxxxxxxxxxxxxx"
 
 captive_portal:
 
@@ -69,10 +69,7 @@ binary_sensor:
     on_press:
       then:
         - switch.toggle: power
-
-
-
-
+        
   - platform: gpio
     name: "Temp Up"
     internal: true
